@@ -22,6 +22,5 @@
   * `git clone https://github.com/sdclibbery/pi-monitor.git`
   * `cd pi-monitor`
   * `npm install`
-  * Add `sudo -u application node /home/application/pi-monitor/index.js` to `/etc/rc.local`
-!!! Use localtunnel from pimonitor itself...
-!!! Go back and switch above from rc.local to cron job that will keep it running...
+  * `chmod +x cron.sh`
+  * Add `* * * * * /home/application/pi-monitor/cron.sh >> /home/application/cron-pi-monitor.log 2>&1` with `crontab -e`
